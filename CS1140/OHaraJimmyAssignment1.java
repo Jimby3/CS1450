@@ -9,80 +9,90 @@
 public class OHaraJimmyAssignment1 {
 
 	public static void main(String[] args) {
-		
-		//declaring constants 
+
+		// declaring constants
 		final int MINIMUM = 10;
 		final int MAXIMUM = 31;
-		
-		
-		//Task #1 | Create a array of random integers
-		//allocating memory for the array
-		int[] randArray = new int[20];
-		
-		//putting random numbers into array
-		for (int i = 0; i < randArray.length; i++) {
-			randArray[i] = MINIMUM + (int)(Math.random()*MAXIMUM);
-		}
-		
-		//displaying the array
-		for (int i = 0; i < randArray.length; i++) {
-			System.out.println("randArray[" + i + "] = " + randArray[i]);
-		}
-		
-		//task #2 | Sum, Average, and Median, and Largest Num
-		
-		//Sum
-		int sum = sum(randArray);
-		
-		//Average
-		double average = average(sum, randArray.length);
-		
-		//Median
-		for (int i = 0; i < randArray.length; i++) {
-			
-		}
-		
-		//Largest Value
-		for (int i = 0; i < randArray.length; i++) {
-			
-		}
-		
-		
-	}//main
 
-	//Method for finding the sum of all items in an array
+		// Task #1 | Create a array of random integers
+		// allocating memory for the array
+		int[] randArray = new int[20];
+
+		// putting random numbers into array
+		for (int i = 0; i < randArray.length; i++) {
+			randArray[i] = MINIMUM + (int) (Math.random() * MAXIMUM);
+		}
+
+		// displaying the array
+		printArray(randArray);
+
+		// task #2 | Sum, Average, and Median, and Largest Num
+
+		// Sum
+		int sum = sum(randArray);
+		System.out.println(sum);
+
+		// Average
+		double average = average(sum, randArray.length);
+		System.out.println(average);
+
+		// Median
+		sortArray(randArray);
+
+		printArray(randArray);
+
+		for (int i = 0; i < randArray.length; i++) {
+
+		}
+
+		// Largest Value
+		for (int i = 0; i < randArray.length; i++) {
+
+		}
+
+	}// main
+
+	public static void printArray(int[] array) {
+		for (int i = 0; i < array.length; i++) {
+			System.out.println("randArray[" + i + "] = " + array[i]);
+		}
+	}
+
+	// Method for finding the sum of all items in an array
 	public static int sum(int[] array) {
-		
+
 		int sum = 0;
 		for (int i = 0; i < array.length; i++) {
 			sum += array[i];
 		}
-		
+
 		return sum;
-		
-	}//sum
-	
-	//Method for finding the average value of an array
+
+	}// sum
+
+	// Method for finding the average value of an array
 	public static double average(int sum, int length) {
-		
+
 		double tempSum = sum;
 		double tempLength = length;
-		
-		
+
 		double average = tempSum / tempLength;
 		return average;
-		
-	}//average
-	
-	//method for finding the median in an array
-	
-	public static int median() { //figure out what to put here
-		//changes again again
+
+	}// average
+
+	// method for finding the median in an array
+
+	public static void sortArray(int[] array) {
+		for (int i = 0; i < array.length; i++) {
+			
+		}
 	}
-	
-	
-}//Assignment 1
+
+	public static int median() { // figure out what to put here
+		// changes again again
+	}
+
+}// Assignment 1
 
 //classes would go here (after assignment#)
-
-
