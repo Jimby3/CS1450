@@ -88,13 +88,6 @@ public class OHaraJimmyAssignment1 {
 			}//column
 			
 		}//row
-		
-		
-		//printing original array but sorted
-		System.out.print("\n\n\n");
-		for (int i = 0; i < randArray.length; i++) {
-			System.out.println(randArray[i]);
-		}
 
 		//Task #4 | Printing to a file
 		
@@ -124,6 +117,21 @@ public class OHaraJimmyAssignment1 {
 		}//row
 		
 		outputFile.close();
+		
+		
+		//reading/printing from the file
+		
+		Scanner fileInput = new Scanner(fileName);
+		
+		System.out.println("\n\n");
+		
+		//reading from the file
+		for (int i = 0; i < randArray.length; i++) {
+			int num = fileInput.nextInt();
+			System.out.println(num);
+		}
+		
+		
 		
 		System.out.println("\n\nFile is in directory: " + fileName.getAbsolutePath());
 		
