@@ -8,24 +8,29 @@ public class OHaraJimmyAssignment2 {
 
 	public static void main(String[] args) throws IOException {
 		
+		//creating file reader and a reference to the file
 		File fileName = new File("Disasters.txt");
 		
 		Scanner fileInput = new Scanner(fileName);
 		
-		int arrayNum = fileInput.nextInt();
 		
+		//reading the first number in the file to determine length and creating array
+		int arrayNum = fileInput.nextInt();
 		Disaster[] array = new Disaster[arrayNum];
 	
 		
 		
-		//Finding out what type each disaster in the file is
+		//Finding out what type each disaster in the file is via iteration
 		for (int i = 0; i < array.length; i++) {
 			
+			//setting each thing in the file to a variable
 			String type = fileInput.next();
 			int year = fileInput.nextInt();
 			double strength = fileInput.nextDouble();
 			String name = fileInput.nextLine().trim();
 			
+			
+			//creates the right object based on the type
 			if (type.equals("earthquake")) {
 				
 				array[i] = new Earthquake(name, year, strength);
@@ -43,26 +48,27 @@ public class OHaraJimmyAssignment2 {
 				array[i] = new Volcano(name, year, strength);
 				
 			}
-			
-		}
+		}//for
 		
 		
 		//Displaying the array
 		System.out.print("Name \t\t\t\t\t  Type \t\t\t Year \t  Strength \t\t\t");
 		System.out.print("------------------------------------------------------------------------------------\n");
-		
 		for (int i = 0; i < array.length; i++) {
 			System.out.printf("%15S \t\t %15S \t\t  %4d \t\t %2.1f \n", array[i].getName(), array[i].getType(), array[i].getYear(), array[i].getStrength());
 		
 		}
 		
-		
+		//creating storm object that can scan through disaster array
 		Storms stormList = new Storms();
 		
 		stormList.findStorms(array, 5);
 		
+		//printing storms 
 		stormList.printStormDetails();
 
+		
+		fileInput.close();
 	}//main
 
 	
@@ -71,11 +77,13 @@ public class OHaraJimmyAssignment2 {
 
 class Disaster {
 	
+	//declaring instance variables
 	private String name;
 	private String type;
 	private int year;
 	private double strength;
 	
+	//constructor
 	public Disaster(String type, String name, int year, double strength) {
 		this.name = name;
 		this.type = type;
@@ -84,6 +92,7 @@ class Disaster {
 		
 	}//constructor
 	
+	//getters
 	public String getName() {
 		return name;
 	}
@@ -101,6 +110,7 @@ class Disaster {
 	}
 	
 	
+	//rating scale method (to be overridden)
 	public String ratingScale() {
 		String temp = "Disasters are all scaled differently";
 		return temp;
@@ -171,27 +181,32 @@ class Volcano extends Disaster{
 
 class Storms {
 	
+	//declaring instance variables
 	private int numTornados;
 	private int numHurricanes;
 	private Disaster[] storms;
 	
+	//find storms method
 	public void findStorms (Disaster[] disasters, double strength) {
 		
+		
+		//count how many hurricanes and tornados there are above the desired strength
 		for (int i = 0; i < disasters.length; i++) {
-			if (disasters[i] instanceof Hurricane && disasters[i].getStrength() >= 5) {
+			if (disasters[i] instanceof Hurricane && disasters[i].getStrength() >= strength) {
 				numHurricanes++;
 				
-			} else if (disasters[i] instanceof Tornado && disasters[i].getStrength() >= 5) {
+			} else if (disasters[i] instanceof Tornado && disasters[i].getStrength() >= strength) {
 				numTornados++;
 				
 			}
 			
-			
-		}
+		}//for
 		
+		//create array of disasters with just the number of storms
 		storms = new Disaster[numHurricanes+numTornados];
 		int index = 0;
 		
+		//re-sorts through the array but this time adding the disaster objects from the given array into the new storm array
 		for (int i = 0; i < disasters.length; i++) {
 			if (disasters[i] instanceof Hurricane && disasters[i].getStrength() >= 5) {
 				storms[index] = disasters[i];
@@ -211,6 +226,7 @@ class Storms {
 	
 	public void printStormDetails() {
 	
+		//printing out info about the storms
 		System.out.println("\n\n\t\tDisasters that are Storms");
 		System.out.println("---------------------------------------------------------");
 		
