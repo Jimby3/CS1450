@@ -1,0 +1,12 @@
+11
+tornado 1925 5 Tri-State
+earthquake 1964 9.2 Good Friday Earthquake
+hurricane 2005 5 Katrina
+volcano 1980 5 Mount St. Helens
+tornado 2011 5 Joplin Missouri
+hurricane 1992 5 Andrew
+tornado 1979 3 Colorado Springs
+tornado 2013 5 El-Reno Oklahoma
+hurricane 2022 4 Ian
+volcano 2017 3 Bogoslof Island
+earthquake 1933 8.4 Sanriku Japan
