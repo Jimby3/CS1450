@@ -1,0 +1,8 @@
+7
+triathlete 26.52 9.37 3.00 Mark Allen
+marathoner 0 6.55 0 Kevin Hart
+triathlete 25.84 9.57 2.89 Dave Scott
+aquathlete 0 9.01 2.04 Hannah Kitchen
+marathoner 0 4.50 0 Alicia Keys
+duathlete 23.47 8.32 0 Kenny Souza
+triathlete 25.30 8.57 2.88 Daniela Ryf
