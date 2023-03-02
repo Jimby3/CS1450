@@ -1,7 +1,6 @@
-import java.util.Scanner
-
-// Jimmy O'Hara
-//Due 3/3/2023
-//Assignment 5
-// CS1450 Tu/Thu 1:40
-//Purpose: To get used to creating generic methods and using stacks to manipulate data
+/* Name: Jimmy O'Hara
+ * Class: CS1450 (T/TH) 
+ * Due: 3/3/23
+ * Assignment: #5
+ * Purpose: to use stacks and generic methods in order to manipulate data
+ */
