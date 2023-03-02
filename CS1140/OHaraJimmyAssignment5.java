@@ -1,3 +1,5 @@
+import java.util.Scanner
+
 // Jimmy O'Hara
 //Due 3/3/2023
 //Assignment 5
