@@ -1,0 +1,11 @@
+turtle
+dog
+cougar
+duck
+sloth
+fox
+alligator
+bear
+hippo
+elephant
+cat
