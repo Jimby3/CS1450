@@ -1,3 +1,11 @@
+/* Name: Jimmy O'Hara
+ * Class: CS1450 (T/TH) 
+ * Due: 2/23/23
+ * Assignment: #4
+ * Purpose: using the comparable interface, and getting used to reading from multiple files
+ */
+
+
 import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
@@ -6,6 +14,7 @@ import java.util.Collections;
 
 
 public class OHaraJimmyAssignment4 {
+	
 
 	public static void main(String[] args) throws IOException {
 		
@@ -85,6 +94,7 @@ public class OHaraJimmyAssignment4 {
 		}//rows
 		
 		System.out.println("\n\n Classification \t\t Name \t\t Capacity");
+		System.out.println("============================================================================\n");
 		
 		Collections.sort(shipArray);
 		
@@ -151,6 +161,8 @@ class Ocean {
 	
 	//displayOcean function
 	public void displayOcean() {
+		
+		System.out.println("Loading the " + name + " Ocean grid with land and ships...\n");
 		
 		System.out.print("Rows: \t");
 		
